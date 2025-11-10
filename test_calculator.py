@@ -28,16 +28,16 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(12, 4), 48)
 
     def test_div1(self):
-        self.assertEqual(self.calc.add(12, 12), 1)
+        self.assertEqual(self.calc.divide(12, 12), 1)
 
     def test_div2(self):
-        self.assertEqual(self.calc.add(6, 2), 3)
+        self.assertEqual(self.calc.divide(6, 2), 3)
 
     def test_mol1(self):
-        self.assertEqual(self.calc.add(10, 10), 0)
+        self.assertEqual(self.calc.modulo(10, 10), 0)
 
     def test_mol2(self):
-        self.assertEqual(self.calc.add(9, 2), 1)
+        self.assertEqual(self.calc.modulo(9, 2), 1)
 
 if __name__ == '__main__':
     unittest.main()
