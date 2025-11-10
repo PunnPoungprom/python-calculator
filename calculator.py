@@ -3,11 +3,13 @@ class Calculator:
         return a + b
 
     def subtract(self, a, b):
-        return b - a
+        return a - b
 
     def multiply(self, a, b):
         result = 0
-        for i in range(b+1):
+        if b < 0:
+            a, b = -a, -b
+        for i in range(b):
             result = self.add(result, a)
         return result
 
@@ -16,10 +18,10 @@ class Calculator:
         while a > b:
             a = self.subtract(a, b)
             result += 1
-        return result
+        return result + 1
     
     def modulo(self, a, b):
-        while a <= b:
+        while a >= b:
             a = a-b
         return a
 
