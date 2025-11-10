@@ -20,12 +20,12 @@ class Calculator:
         if (a < 0 or b < 0) and not (a < 0 and b < 0):
             counter = -1
 
-        if b < 0:
-            a, b = -a, -b
+        if a < 0 or b < 0:
+            a, b = abs(a), abs(b)
         while a > b:
             a = self.subtract(a, b)
             result += counter
-        return result + 1
+        return result + counter
     
     def modulo(self, a, b):
         while a >= b:
