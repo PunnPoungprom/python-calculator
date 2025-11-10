@@ -15,10 +15,14 @@ class Calculator:
 
     def divide(self, a, b):
         result = 0
+        counter = 1
+        if b < 0:
+            a, b = -a, -b
+            counter = -1
         while a > b:
             a = self.subtract(a, b)
-            result += 1
-        return result + 1
+            result += counter
+        return result + counter
     
     def modulo(self, a, b):
         while a >= b:
